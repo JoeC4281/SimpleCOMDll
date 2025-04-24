@@ -18,6 +18,16 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub Form_Load()
+  'This program requires the vbAdvance plugin,
+  '  which allows the creation of a console .exe
+  '
+  'You can also use editbin.exe to create a console .exe
+  '  after you have created comtest.exe
+  '
+  '  editbin.exe /SUBSYSTEM:CONSOLE comtest.exe
+  '
+  'editbin.exe is part of Visual Studio
+  '
   Dim cs As SimpleComClass
   Dim CScript As New Console
   
