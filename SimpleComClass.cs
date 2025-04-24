@@ -9,7 +9,7 @@ namespace SimpleComDll
     public interface ISimpleComClass
     {
         void ShowMessage(string message);
-				double PPP(double PPK); // Adding PPP function to the interface
+		double PPP(double PPK); // Adding PPP function to the interface
     }
 
     [ComVisible(true)]
