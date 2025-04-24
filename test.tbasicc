@@ -1,0 +1,18 @@
+﻿'---Load Console Module
+Uses "Console"
+
+dim Cs as iDispatch
+dim result as String
+
+CS = CreateObject("SimpleComDll.SimpleComClass")
+
+If IsComObject(cs) then
+  result = cs.PPP(6.59)
+
+  printl result
+  
+Else
+  Printl "Could not create SimpleComDll.SimpleComClass object"
+end if
+
+cs = Nothing
