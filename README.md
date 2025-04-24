@@ -6,10 +6,10 @@ without the need to use Visual Studio.
 
 This 32-bit ActiveX COM dll can then be used from;
 
-Powershell
-thinBasic
-VBScript
-Visual Basic 6.0
+Powershell  
+thinBasic  
+VBScript  
+Visual Basic 6.0  
 Visual FoxPro 9.0
 
 ...and other 32-bit applications.
