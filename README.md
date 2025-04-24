@@ -20,7 +20,7 @@ Review the source code for <a href="https://github.com/JoeC4281/SimpleCOMDll/blo
 
 TCC is available from https://jpsoft.com/
 
-Here's a thinBASIC example;
+Here's a <a href="https://www.thinbasic.com/" target="_blank">thinBASIC</a> example;
 ```vb script
 Uses "Console"
 
