@@ -28,6 +28,9 @@ Private Sub Form_Load()
   '
   'editbin.exe is part of Visual Studio
   '
+  'Build your own Application Mode Changer with VB6...
+  '  https://www.nirsoft.net/vb/appmodechange.html
+  '
   Dim cs As SimpleComClass
   Dim CScript As New Console
   
