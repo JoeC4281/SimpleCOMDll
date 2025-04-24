@@ -19,13 +19,18 @@ Option Explicit
 
 Private Sub Form_Load()
   Dim cs As SimpleComClass
-  Dim CScript As Console
+  Dim CScript As New Console
   
   Set cs = New SimpleComClass
   Set CScript = New Console
   
-  Debug.Print cs.PPP(6.59)
-  CScript.Echo cs.PPP(6.59)
+  If App.LogMode = 1 Then
+    CScript.Echo cs.PPP(6.59)
+  End If
+  
+  If App.LogMode = 0 Then
+    Debug.Print cs.PPP(6.59)
+  End If
   
   Set cs = Nothing
   

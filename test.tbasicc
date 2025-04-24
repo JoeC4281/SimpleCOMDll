@@ -6,6 +6,7 @@ dim result as String
 
 CS = CreateObject("SimpleComDll.SimpleComClass")
 
+
 If IsComObject(cs) then
   result = cs.PPP(6.59)
 

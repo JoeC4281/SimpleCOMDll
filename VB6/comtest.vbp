@@ -1,6 +1,6 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{44DE1CB2-E45C-38B5-86B2-6EA773D952FF}#1.0#0#SimpleComDll.tlb#SimpleComDll
+Reference=*\G{44DE1CB2-E45C-38B5-86B2-6EA773D952FF}#1.0#0#..\SimpleComDll.tlb#SimpleComDll
 Form=COMTest.frm
 Class=Console; Console.cls
 Startup="Form1"
