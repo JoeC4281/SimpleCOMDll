@@ -14,7 +14,7 @@ Visual FoxPro 9.0
 
 ...and other 32-bit applications.
 
-Review the source code for 32bit.btm for detailed instructions.
+Review the source code for <a href="https://github.com/JoeC4281/SimpleCOMDll/blob/main/32bit.btm" target="_blank">32bit.btm</a> for detailed instructions.
 
 32bit.btm is a TCC batch file
 
