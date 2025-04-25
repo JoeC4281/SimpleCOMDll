@@ -10,4 +10,4 @@ resultValue = obj.PPP(inputValue)
 ' Display the result
 WScript.Echo "PPP(" & inputValue & ") = " & resultValue
 
-Set ojb = Nothing
+Set obj = Nothing

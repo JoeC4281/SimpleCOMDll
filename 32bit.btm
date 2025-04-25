@@ -5,6 +5,8 @@ set theDLL=SimpleComDll.dll
 set theTlb=SimpleComDll.tlb
 set theCS=SimpleComClass.cs
 
+if %1 eq /u goto UnRegister
+
 :: Ensure that the ActiveX COM SimpleComDll.dll has been un-registered
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe %theDll /u
 
@@ -63,4 +65,5 @@ echo.
 :: Un-register the ActiveX COM %theDLL
 echo Press Ctrl-C to abort un-registering %theDLL,
 pause press Spacebar to continue with un-registering %theDLL
+:UnRegister
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm.exe %theDLL /u

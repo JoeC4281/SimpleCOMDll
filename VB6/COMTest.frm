@@ -33,7 +33,7 @@ Private Sub Form_Load()
   '
   Dim cs As SimpleComClass
   Dim CScript As New Console
-  
+
   Set cs = New SimpleComClass
   Set CScript = New Console
   
