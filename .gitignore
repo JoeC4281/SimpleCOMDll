@@ -2,3 +2,6 @@ doit.btm
 PBTest.bas
 readme.txt
 *.bak
+*.pui
+*.prj
+*.bup
