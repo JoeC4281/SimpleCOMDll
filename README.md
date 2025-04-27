@@ -16,6 +16,8 @@ Visual FoxPro 9.0
 
 Review the source code for <a href="https://github.com/JoeC4281/SimpleCOMDll/blob/main/32bit.btm" target="_blank">32bit.btm</a> for detailed instructions.
 
+For 64-bit, review the source for <a href="https://github.com/JoeC4281/SimpleCOMDll/blob/main/x64/64bit.btm" target="_blank">64bit.btm</a> for detailed instructions.
+
 32bit.btm is a TCC batch file
 
 TCC is available from https://jpsoft.com/

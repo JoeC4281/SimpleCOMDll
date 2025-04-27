@@ -1,0 +1,69 @@
+@echo off
+:: This creates a 64-bit ActiveX COM dll for use with 64-bit applications.
+
+set theDLL=SimpleComDll.dll
+set theTlb=SimpleComDll.tlb
+set theCS=SimpleComClass.cs
+
+if %1 eq /u goto UnRegister
+
+:: Ensure that the ActiveX COM SimpleComDll.dll has been un-registered
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe %theDll /u
+
+echo.
+
+iff exist %theDLL then
+  iff %@filelock[%theDLL] gt 0 then
+    echo Cannot delete %theDll as the following process is using it...
+    filelock %theDll
+    quit
+  else
+    del /q %theDll
+  endiff
+endiff
+
+iff exist %theTlb then
+  iff %@filelock[%theTlb] gt 0 then
+    echo Cannot delete %theTlb as the following process is using it...
+    filelock %theTlb
+    quit
+  else
+    del /q %theTlb
+  endiff
+endiff
+
+:: I am using the following version of csc.exe
+:: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe"
+
+csc /target:library /platform:x64 /out:%theDll %theCS
+
+iff exist %theDll then
+  C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe /codebase %theDll
+else
+  echo %theDll does not exist.
+  quit
+endiff
+
+echo.
+
+:: Generate the Type Library for the ActiveX COM SimpleComDll.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe /tlb:%theTlb %theDll
+
+echo.
+
+:: Test
+C:\Windows\System32\cscript.exe //nologo test.vbs
+
+echo.
+
+:: COMTest.exe was created from the VB6 COMTest.vbp
+:: vb6 /make %@Truename[COMTest.vbp]
+if exist COMTest.exe COMTest.exe
+
+echo.
+
+:: Un-register the ActiveX COM %theDLL
+echo Press Ctrl-C to abort un-registering %theDLL,
+pause press Spacebar to continue with un-registering %theDLL
+:UnRegister
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regasm.exe %theDLL /u
