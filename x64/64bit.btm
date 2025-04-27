@@ -56,12 +56,6 @@ C:\Windows\System32\cscript.exe //nologo test.vbs
 
 echo.
 
-:: COMTest.exe was created from the VB6 COMTest.vbp
-:: vb6 /make %@Truename[COMTest.vbp]
-if exist COMTest.exe COMTest.exe
-
-echo.
-
 :: Un-register the ActiveX COM %theDLL
 echo Press Ctrl-C to abort un-registering %theDLL,
 pause press Spacebar to continue with un-registering %theDLL
